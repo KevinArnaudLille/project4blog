@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 
 // React-redux methods importation
 import { useSelector } from 'react-redux';
