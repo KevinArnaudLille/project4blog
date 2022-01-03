@@ -3,7 +3,7 @@ import React from 'react';
 // React-redux methods importation
 import { useSelector } from 'react-redux';
 
-export default function Article() {
+export default function Article(props) {
 
   // Stored data fetching
   const { tutoArticleData } = useSelector(state => ({
@@ -17,12 +17,12 @@ export default function Article() {
         </div>
         <div className='relative bg-transparent z-10 p-2'>
           <h1 className='text-2xl text-gray-800'>
-            {tutoArticleData[0].title}
+            {tutoArticleData[props.articleIndex].title}
           </h1>
-          <div className="date">{tutoArticleData[0].date}</div>
-          <img className='' src={tutoArticleData[0].imgURL} alt="img" />
+          <div className="date">{tutoArticleData[props.articleIndex].date}</div>
+          <img className='' src={tutoArticleData[props.articleIndex].imgURL} alt="img" />
           <div className="text-gray-900">
-            {tutoArticleData[0].content}
+            {tutoArticleData[props.articleIndex].content}
           </div>
         </div>
       </div>

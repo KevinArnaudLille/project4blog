@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 const INITIAL_STATE = {
   tutoArticleData: {}
 }
@@ -6,12 +8,10 @@ const INITIAL_STATE = {
 INITIAL_STATE.tutoArticleData = require('./tutoArticleData.json');
 console.log(INITIAL_STATE.tutoArticleData);
 
-function tutoReducer(state = INITIAL_STATE, action) {
-  
-  switch (action.type){
-    default :
-      return state
-  }
+function tutoReducer(state = INITIAL_STATE) {
+
+  return state
+
 }
 
 export default tutoReducer;
