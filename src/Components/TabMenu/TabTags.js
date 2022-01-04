@@ -28,19 +28,24 @@ export default function TabTags() {
 
 
     return (
-        <div className='text-2xl bg-wave-5 overflow-x-auto flex flex-nowrap px-1'>
-            {tutoArticlesTags.map(tag => {
-
-                if (tagsListToDisplay.includes(tag)) {
-                    return (
-                        <button className='m-1 text-wave-1 font-bold' onClick={() => removeTag(tag)}>{tag}</button>
-                    )
-                } else {
-                    return (
-                        <button className='m-1' onClick={() => addTag(tag)}>{tag}</button>
-                    )
-                }
-            })}
+        <>
+        <div className='bg-wave-2 pl-1'>
+            Refine by tags:
         </div>
+            <div className='text-3xl bg-wave-5 overflow-x-auto flex flex-nowrap px-1'>
+                {tutoArticlesTags.map(tag => {
+
+                    if (tagsListToDisplay.includes(tag)) {
+                        return (
+                            <button className='m-1 text-wave-1 font-bold' onClick={() => removeTag(tag)}>{tag}</button>
+                        )
+                    } else {
+                        return (
+                            <button className='m-1' onClick={() => addTag(tag)}>{tag}</button>
+                        )
+                    }
+                })}
+            </div>
+        </>
     )
 }
