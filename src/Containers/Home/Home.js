@@ -2,6 +2,7 @@ import React from 'react'
 
 // Components importation
 import ArticlesContainer from '../ArticlesContainer/ArticlesContainer';
+import TabTags from '../../Components/TabMenu/TabTags';
 
 // Style sheet import
 import "./Home.css"
@@ -15,6 +16,7 @@ export default function Home() {
       <div className="mainTitle text-4xl font-bold pl-1 pt-1 text-gray-800">
         BLOG
       </div>
+      <TabTags/>
       <ArticlesContainer/>
     </div>
   )

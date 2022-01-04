@@ -5,7 +5,8 @@
     "date": "Sun Jan 02 2022 15:23:20 GMT+0100",
     "tags": [
       "CSS",
-      "animation"
+      "animation",
+      "event"
     ],
     "imgURL": "https://www.ryanhart.org/img/featured_journal_handwriting.jpg",
     "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod corporis asperiores laboriosam vel beatae aliquid dolore at necessitatibus, provident rem. Iste cupiditate eaque eos sint pariatur, consectetur, obcaecati debitis soluta rerum ducimus quis et excepturi voluptatem minus, non repudiandae cum dignissimos quia a eum quas! Dolorem dicta facilis architecto eaque nisi quis commodi non perspiciatis beatae, vitae nulla, in veniam numquam eum quasi aut cupiditate vero! Accusantium vel sed, nihil cum quia tenetur incidunt iure possimus cupiditate eum repellendus soluta veniam illum. Officiis vero quo illum sapiente explicabo, debitis quas ea totam. Animi ratione pariatur ab ut fugit. Amet, soluta molestias! Magnam possimus, quas fugit neque necessitatibus mollitia cum molestiae quis cumque illo omnis odit exercitationem qui recusandae quae a facere repellat repellendus rerum, voluptatibus ratione? Tenetur, doloremque. Recusandae et error numquam necessitatibus in laborum quo sunt quis nihil nostrum aperiam quibusdam fugit nulla debitis qui inventore eius, earum sapiente deserunt soluta expedita dolores. Totam voluptas vero nesciunt nostrum pariatur eius? Temporibus ducimus, similique velit quae reiciendis fuga saepe! Modi, recusandae? Incidunt doloremque quaerat itaque, deleniti iste necessitatibus ea odio facilis magni, maxime, modi fugiat voluptates. Error commodi, dolore fugit eius et exercitationem consectetur, repellendus tempore est a officiis ullam dolorem voluptatem rem obcaecati placeat sequi facere quisquam doloribus sapiente fuga ex nobis eveniet sit?"
@@ -13,7 +14,7 @@
   {
     "id": "002",
     "title": "Another title exemple for massive article",
-    "date": "Sun Jan 03 2022 10:45:10 GMT+0100",
+    "date": "Mon Jan 03 2022 10:45:10 GMT+0100",
     "tags": [
       "CSS",
       "JS"
@@ -24,7 +25,7 @@
   {
     "id": "003",
     "title": "A cute title exemple for cute article",
-    "date": "Sun Jan 04 2022 15:55:55 GMT+0100",
+    "date": "Thu Jan 04 2022 15:55:55 GMT+0100",
     "tags": [
       "JS",
       "cat",

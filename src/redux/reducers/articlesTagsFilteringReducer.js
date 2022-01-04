@@ -3,8 +3,6 @@ const INITIAL_STATE = {
 }
 
 function articlesTagsFilteringReducer(state = INITIAL_STATE, { type, payload }) {
-
-    console.log(state.tagsListToDisplay);
     let newTagsList = state.tagsListToDisplay;
 
     switch (type) {
