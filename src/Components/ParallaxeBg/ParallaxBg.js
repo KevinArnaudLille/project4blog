@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
+import cloudTest from "../../Assets/Clouds/cloud-test.svg"
 
 export default function ParallaxBg() {
 
@@ -15,25 +16,18 @@ export default function ParallaxBg() {
 
     // Update  with scrolling
     useEffect(() => {
-        console.log('window inner height: ', window.innerHeight);
 
-        console.log('document Element client hieght: ', document.documentElement.clientHeight);
-
+        // ICI
         console.log('document Element scroll hieght: ', document.documentElement.scrollHeight);
 
-        console.log('document Element offset height: ', document.documentElement.offsetHeight);
-
-        console.log('document element scrolltop: ', document.documentElement.scrollTop);
-
-        console.log('window page Y Offset: ', window.pageYOffset);
-
-        console.log('window document body offsetheight: ', window.document.body.offsetHeight);
     }, [scrollYValue])
 
 
     return (
         <div>
-            
+            <img 
+            src={cloudTest}
+            alt="" />
         </div>
     )
 }

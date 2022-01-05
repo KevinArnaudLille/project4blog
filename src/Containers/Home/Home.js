@@ -16,11 +16,13 @@ export default function Home() {
   return (
     <>
       <div className='Home-bg absolute top-0 left-0 w-screen min-h-screen flex flex-col justify-between'>
-        <div className='absolute'>
+        <div className='absolute z-0'>
           <ParallaxBg />
         </div>
+        <div className='z-10'>
         <Header />
-        <div className="flex-grow">
+        </div>
+        <div className="flex-grow z-10">
           <TabTags />
           <ArticlesContainer />
         </div>

@@ -3,23 +3,11 @@ import React, { useState, useEffect } from 'react';
 // Asset importation
 import chevronDownIconPageUp from "../../Assets/Icons/chevron-down-page-up.svg"
 
-// React-redux methods importation
-// import { useSelector } from 'react-redux';
-
 export default function PageUpBtn() {
-
-    // TO CHANGE
-    // const { scrollYValue } = useSelector(state => ({
-    //     ...state.scrollYStoreReducer
-    //   }))
-
-    // NOT WORKING
-    // useEffect(() => {
-    //     console.log(scrollYValue);
-    // }, [scrollYValue])
 
     // Display btn state
     const [pageTopBtnDisplay, setPageTopBtnDisplay] = useState(false);
+    const [isTimerOn, setIsTimerOn] = useState(false);
     const [scrollYValue, setScrollYValue] = useState(0);
     const [oldScrollYValue, setOldScrollYValue] = useState(0);
 
@@ -35,7 +23,13 @@ export default function PageUpBtn() {
     useEffect(() => {
         if(scrollYValue > 2000 && oldScrollYValue > scrollYValue){
             setPageTopBtnDisplay(true);
-            setTimeout(() => setPageTopBtnDisplay(false),2000)
+            if (!isTimerOn){
+                setIsTimerOn(true);
+                setTimeout(()=>{
+                    setIsTimerOn(false);
+                    setPageTopBtnDisplay(false);
+                },2000)
+            }
         } else {
             setPageTopBtnDisplay(false);
         }
