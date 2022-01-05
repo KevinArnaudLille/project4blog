@@ -1,10 +1,16 @@
+// Unique key generation
+import { v4 as uuidv4 } from 'uuid';
+
 const INITIAL_STATE = {
   tutoArticleData: [],
   tutoArticlesTags:[]
 }
 
-// Fetch local JSON
+// Fetch local JSON and add unique id
 INITIAL_STATE.tutoArticleData = require('./tutoArticleData.json');
+INITIAL_STATE.tutoArticleData.forEach(obj => {
+  obj.uid = uuidv4()
+});
 console.log(INITIAL_STATE.tutoArticleData);
 
 // Init tags list from all articles

@@ -13,11 +13,14 @@ export default function Article(props) {
     ...state.tutoReducer
   }))
 
-  // Accordeon toggle
+  // Accordeon toggle state
   const [accordeonToggle, setAccordeonToggle] = useState(false);
   const switchAccordeonToggle = () => {
     setAccordeonToggle(!accordeonToggle)
   }
+
+  // Find article with uid
+  const [articleToDisplay] = useState(tutoArticleData.find(obj => obj.uid === props.uid))
 
   return (
     <>
@@ -26,25 +29,25 @@ export default function Article(props) {
         </div>
         <div className='relative bg-transparent z-10 p-2'>
           <h1 className='text-2xl text-gray-800'>
-            {tutoArticleData[props.articleIndex].title}
+            {articleToDisplay.title}
           </h1>
 
-          <div className="date">{tutoArticleData[props.articleIndex].date.substr(4, 11)}</div>
+          <div className="date">{articleToDisplay.date.substr(4, 11)}</div>
 
           <div className='italic text-gray-600 text-lg'>
             Tags:
-          {tutoArticleData[props.articleIndex].tags.map(item => {
+          {articleToDisplay.tags.map(item => {
             return (
-              <span >{` ${item}`}</span>
+              <span key={item}>{` ${item}`}</span>
               )
             })}
             </div>
 
-          <img className='' src={tutoArticleData[props.articleIndex].imgURL} alt="img" />
+          <img className='' src={articleToDisplay.imgURL} alt="img" />
 
           {accordeonToggle &&
             <div className="text-gray-900">
-              {tutoArticleData[props.articleIndex].content}
+              {articleToDisplay.content}
             </div>
           }
 

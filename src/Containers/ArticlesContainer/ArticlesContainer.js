@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 // React-redux methods importation
 import { useSelector } from 'react-redux';
@@ -14,14 +14,13 @@ export default function ArticlesContainer() {
     ...state.articlesTagsFilteringReducer
   }))
 
-
   if (tagsListToDisplay.length > 0) {
     return (
       <div className='flex flex-col items-center'>
-        {tutoArticleData.map((item, index) => {
+        {[...tutoArticleData].reverse().map(item => {
           if (item.tags.some(tag => tagsListToDisplay.includes(tag))) {
             return (
-              <Article articleIndex={index} />
+              <Article key={item.uid} uid={item.uid} />
             )
           }
         })}
@@ -30,9 +29,9 @@ export default function ArticlesContainer() {
   } else {
     return (
       <div className='flex flex-col items-center'>
-        {tutoArticleData.map((item, index) => {
+        {[...tutoArticleData].reverse().map(item => {
           return (
-            <Article articleIndex={index} />
+            <Article key={item.uid} uid={item.uid} />
           )
         })}
       </div>

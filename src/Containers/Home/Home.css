@@ -1,8 +1,4 @@
-.Home {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
+.Home-bg {
   background: var(--home-main-bg-color-down);
   background: linear-gradient(0deg,var(--home-main-bg-color-down) 11%, var(--home-main-bg-color-up) 79%);
 }

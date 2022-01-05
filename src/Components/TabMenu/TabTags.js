@@ -37,11 +37,11 @@ export default function TabTags() {
 
                     if (tagsListToDisplay.includes(tag)) {
                         return (
-                            <button className='m-1 text-wave-1 font-bold' onClick={() => removeTag(tag)}>{tag}</button>
+                            <button key={tag} className='m-1 text-wave-1 font-bold italic' onClick={() => removeTag(tag)}>{tag}</button>
                         )
                     } else {
                         return (
-                            <button className='m-1' onClick={() => addTag(tag)}>{tag}</button>
+                            <button key={tag} className='m-1 italic' onClick={() => addTag(tag)}>{tag}</button>
                         )
                     }
                 })}
