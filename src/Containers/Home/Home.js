@@ -20,16 +20,18 @@ export default function Home() {
           <ParallaxBg />
         </div>
         <div className='z-10'>
-        <Header />
+          <Header />
         </div>
         <div className="flex-grow z-10">
           <TabTags />
           <ArticlesContainer />
         </div>
-        <Footer />
-        <div className='fixed bottom-1 left-1/2 -translate-x-1/2'>
-          <PageUpBtn />
+        <div className='z-10'>
+          <Footer />
         </div>
+      <div className='fixed bottom-1 left-1/2 -translate-x-1/2 z-20'>
+        <PageUpBtn />
+      </div>
       </div>
     </>
   )

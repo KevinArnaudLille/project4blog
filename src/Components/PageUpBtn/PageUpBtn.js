@@ -21,14 +21,14 @@ export default function PageUpBtn() {
 
     // Update btn display state with scrolling
     useEffect(() => {
-        if(scrollYValue > 2000 && oldScrollYValue > scrollYValue){
+        if (scrollYValue > 2000 && oldScrollYValue > scrollYValue) {
             setPageTopBtnDisplay(true);
-            if (!isTimerOn){
+            if (!isTimerOn) {
                 setIsTimerOn(true);
-                setTimeout(()=>{
+                setTimeout(() => {
                     setIsTimerOn(false);
                     setPageTopBtnDisplay(false);
-                },2000)
+                }, 2000)
             }
         } else {
             setPageTopBtnDisplay(false);
