@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import cloudTest from "../../Assets/Clouds/cloud-test.svg"
+import cloudTest from "../../assets/clouds/cloud-test.svg"
 
 export default function ParallaxBg() {
 
@@ -16,7 +16,6 @@ export default function ParallaxBg() {
 
     // Update  with scrolling
     useEffect(() => {
-
         // ICI
         console.log('document Element scroll hieght: ', document.documentElement.scrollHeight);
 

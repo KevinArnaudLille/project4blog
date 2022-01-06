@@ -3,6 +3,6 @@
   background: linear-gradient(0deg,var(--home-main-bg-color-down) 11%, var(--home-main-bg-color-up) 79%);
 }
 
-.mainTitle{
+.titleFont{
   font-family: var(--title-font-family)
 }

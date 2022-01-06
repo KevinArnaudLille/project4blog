@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 // Asset importation
-import chevronDownIconPageUp from "../../Assets/Icons/chevron-down-page-up.svg"
+import chevronDownIconPageUp from "../../assets/icons/chevron-down-page-up.svg"
 
 export default function PageUpBtn() {
 

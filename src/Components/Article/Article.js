@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 
+// Router methods importation
+import { Link } from 'react-router-dom';
+
 // React-redux methods importation
 import { useSelector } from 'react-redux';
 
 // Asset importation
-import chevronDownIcon from "../../Assets/Icons/chevron-down.svg"
+import chevronDownIcon from "../../assets/icons/chevron-down.svg"
+import chevronDownIconTwo from "../../assets/icons/chevron-down-page-up.svg"
 
 export default function Article(props) {
 
@@ -28,20 +32,26 @@ export default function Article(props) {
         <div className='absolute opacity-50 w-full h-full bg-wave-1 border-4 border-wave-5 border-double rounded z-0'>
         </div>
         <div className='relative bg-transparent z-10 p-2'>
-          <h1 className='text-2xl text-gray-800'>
-            {articleToDisplay.title}
-          </h1>
+
+          <Link to={`/article/${articleToDisplay.id}`}>
+            <div className='flex'>
+              <h1 className='text-2xl text-gray-800'>
+                {articleToDisplay.title}
+              </h1>
+              <img className='w-8 -rotate-90' src={chevronDownIconTwo} alt="goBack" />
+            </div>
+          </Link>
 
           <div className="date">{articleToDisplay.date.substr(4, 11)}</div>
 
           <div className='italic text-gray-600 text-lg'>
             Tags:
-          {articleToDisplay.tags.map(item => {
-            return (
-              <span key={item}>{` ${item}`}</span>
+            {articleToDisplay.tags.map(item => {
+              return (
+                <span key={item}>{` ${item}`}</span>
               )
             })}
-            </div>
+          </div>
 
           <img className='' src={articleToDisplay.imgURL} alt="img" />
 
