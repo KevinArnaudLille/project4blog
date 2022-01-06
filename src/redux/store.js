@@ -2,11 +2,11 @@ import { createStore,combineReducers } from "redux";
 
 // Reducers importation
 import articlesTagsFilteringReducer from "./reducers/articlesTagsFilteringReducer";
-import tutoReducer from "./reducers/tutoReducer";
+import articlesDbReducer from "./reducers/articlesDbReducer";
 import scrollYStoreReducer from "./reducers/scrollYStoreReducer";
 
 const rootReducer = combineReducers({
-  tutoReducer,
+  articlesDbReducer,
   articlesTagsFilteringReducer,
   scrollYStoreReducer
 })

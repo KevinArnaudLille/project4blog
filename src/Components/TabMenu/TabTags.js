@@ -8,7 +8,7 @@ export default function TabTags() {
     // Stored data fetching
     const { tagsListToDisplay, tutoArticlesTags } = useSelector(state => ({
         ...state.articlesTagsFilteringReducer,
-        ...state.tutoReducer
+        ...state.articlesDbReducer
     }))
 
     // Modify applied filter tags

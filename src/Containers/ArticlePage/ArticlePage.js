@@ -18,7 +18,7 @@ export default function ArticlePage() {
 
     // Stored data fetching
     const { tutoArticleData } = useSelector(state => ({
-        ...state.tutoReducer
+        ...state.articlesDbReducer
     }))
 
     // Go top of the page at init

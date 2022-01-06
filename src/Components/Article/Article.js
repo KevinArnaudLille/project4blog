@@ -14,7 +14,7 @@ export default function Article(props) {
 
   // Stored data fetching
   const { tutoArticleData } = useSelector(state => ({
-    ...state.tutoReducer
+    ...state.articlesDbReducer
   }))
 
   // Accordeon toggle state
@@ -63,11 +63,11 @@ export default function Article(props) {
             {articleToDisplay.content}
           </div>
         }
-        <div className="text-gray-900">
+        <div className="text-gray-900 hidden lg:block">
           {articleToDisplay.content}
         </div>
 
-        <div className='flex flex-col items-center lg:invisible'>
+        <div className='flex flex-col items-center lg:hidden'>
           <button onClick={switchAccordeonToggle}>
             <img className={accordeonToggle ? 'w-12 rotate-180' : "w-12"} src={chevronDownIcon} alt="" />
           </button>

@@ -10,7 +10,7 @@ export default function ArticlesContainer() {
 
   // Stored data fetching
   const { tutoArticleData, tagsListToDisplay } = useSelector(state => ({
-    ...state.tutoReducer,
+    ...state.articlesDbReducer,
     ...state.articlesTagsFilteringReducer
   }))
 

@@ -1,6 +1,10 @@
 // Unique key generation
 import { v4 as uuidv4 } from 'uuid';
 
+// Load firebase db
+import { db } from '../../firebase/firebase';
+db.collection("articles")
+
 const INITIAL_STATE = {
   tutoArticleData: [],
   tutoArticlesTags:[]
@@ -21,10 +25,10 @@ for (let article of INITIAL_STATE.tutoArticleData){
 INITIAL_STATE.tutoArticlesTags = [...new Set(fetchAllArticleTags)];
 
 
-function tutoReducer(state = INITIAL_STATE) {
+function articlesDbReducer(state = INITIAL_STATE) {
 
   return state
 
 }
 
-export default tutoReducer;
+export default articlesDbReducer;
