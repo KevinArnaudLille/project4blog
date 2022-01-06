@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 // Asset importation
-import chevronDownIcon from "../../assets/icons/chevron-down-page-up.svg"
+import chevronDownIcon from "../../Assets/Icons/chevron-down-page-up.svg"
 
 export default function Header(props) {
 

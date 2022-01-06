@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 // Asset importation
-import chevronDownIcon from "../../assets/icons/chevron-down.svg"
-import chevronDownIconTwo from "../../assets/icons/chevron-down-page-up.svg"
+import chevronDownIcon from "../../Assets/Icons/chevron-down.svg"
+import chevronDownIconTwo from "../../Assets/Icons/chevron-down-page-up.svg"
 
 export default function Article(props) {
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import cloudTest from "../../assets/clouds/cloud-test.svg"
+import cloudTest from "../../Assets/Clouds/cloud-test.svg"
 
 export default function ParallaxBg() {
 
