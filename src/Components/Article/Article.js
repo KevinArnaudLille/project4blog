@@ -27,47 +27,53 @@ export default function Article(props) {
   const [articleToDisplay] = useState(tutoArticleData.find(obj => obj.uid === props.uid))
 
   return (
-    <>
-      <div className='relative w-11/12 z-0 my-1'>
-        <div className='absolute opacity-50 w-full h-full bg-wave-1 border-4 border-wave-5 border-double rounded z-0'>
+
+    <div className='relative w-11/12 z-0 my-1 lg:w-auto lg:h-full'>
+      <div className='absolute opacity-50 w-full h-full bg-wave-1 border-4 border-wave-5 border-double rounded z-0'>
+      </div>
+      <div className='relative bg-transparent z-10 p-2'>
+
+        <Link to={`/article/${articleToDisplay.id}`}>
+          <div className='flex justify-between'>
+            <h1 className='text-2xl text-gray-800'>
+              {articleToDisplay.title}
+            </h1>
+            <img className='w-8 -rotate-90' src={chevronDownIconTwo} alt="goBack" />
+          </div>
+        </Link>
+
+        <div className="date">{articleToDisplay.date.substr(4, 11)}</div>
+
+        <div className='italic text-gray-600 text-lg'>
+          Tags:
+          {articleToDisplay.tags.map(item => {
+            return (
+              <span key={item}>{` ${item}`}</span>
+            )
+          })}
         </div>
-        <div className='relative bg-transparent z-10 p-2'>
 
-          <Link to={`/article/${articleToDisplay.id}`}>
-            <div className='flex'>
-              <h1 className='text-2xl text-gray-800'>
-                {articleToDisplay.title}
-              </h1>
-              <img className='w-8 -rotate-90' src={chevronDownIconTwo} alt="goBack" />
-            </div>
-          </Link>
+        <div className='flex justify-center'>
+          <img className='object-contain rounded-md lg:max-h-96 lg:m-2' src={articleToDisplay.imgURL} alt="img" />
+        </div>
 
-          <div className="date">{articleToDisplay.date.substr(4, 11)}</div>
 
-          <div className='italic text-gray-600 text-lg'>
-            Tags:
-            {articleToDisplay.tags.map(item => {
-              return (
-                <span key={item}>{` ${item}`}</span>
-              )
-            })}
+        {accordeonToggle &&
+          <div className="text-gray-900">
+            {articleToDisplay.content}
           </div>
+        }
+        <div className="text-gray-900">
+          {articleToDisplay.content}
+        </div>
 
-          <img className='' src={articleToDisplay.imgURL} alt="img" />
-
-          {accordeonToggle &&
-            <div className="text-gray-900">
-              {articleToDisplay.content}
-            </div>
-          }
-
-          <div className='flex flex-col items-center'>
-            <button onClick={switchAccordeonToggle}>
-              <img className={accordeonToggle ? 'w-12 rotate-180' : "w-12"} src={chevronDownIcon} alt="" />
-            </button>
-          </div>
+        <div className='flex flex-col items-center lg:invisible'>
+          <button onClick={switchAccordeonToggle}>
+            <img className={accordeonToggle ? 'w-12 rotate-180' : "w-12"} src={chevronDownIcon} alt="" />
+          </button>
         </div>
       </div>
-    </>
+    </div>
+
   )
 }

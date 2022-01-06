@@ -18,7 +18,6 @@ export default function ParallaxBg() {
     useEffect(() => {
         // ICI
         console.log('document Element scroll hieght: ', document.documentElement.scrollHeight);
-
     }, [scrollYValue])
 
 

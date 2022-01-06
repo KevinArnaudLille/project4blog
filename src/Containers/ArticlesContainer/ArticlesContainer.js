@@ -14,9 +14,11 @@ export default function ArticlesContainer() {
     ...state.articlesTagsFilteringReducer
   }))
 
+  const [tailWindStyle] = useState('flex flex-col items-center lg:grid lg:grid-cols-2 lg:items-start lg:auto-cols-auto lg:gap-2 lg:p-2')
+
   if (tagsListToDisplay.length > 0) {
     return (
-      <div className='flex flex-col items-center'>
+      <div className={tailWindStyle}>
         {[...tutoArticleData].reverse().map(item => {
           if (item.tags.some(tag => tagsListToDisplay.includes(tag))) {
             return (
@@ -28,7 +30,7 @@ export default function ArticlesContainer() {
     )
   } else {
     return (
-      <div className='flex flex-col items-center'>
+      <div className={tailWindStyle}>
         {[...tutoArticleData].reverse().map(item => {
           return (
             <Article key={item.uid} uid={item.uid} />

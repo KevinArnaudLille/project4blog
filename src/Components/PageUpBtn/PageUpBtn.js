@@ -37,12 +37,12 @@ export default function PageUpBtn() {
     }, [scrollYValue])
 
     return (
-        <>
+        <div className='lg:invisible'>
             {pageTopBtnDisplay &&
                 <button onClick={() => { window.scrollTo(0, 0) }}>
                     <img className='w-40 scale-x-150 rotate-180 opacity-60' src={chevronDownIconPageUp} alt="To top" />
                 </button>
             }
-        </>
+        </div>
     )
 }
