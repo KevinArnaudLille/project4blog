@@ -24,7 +24,9 @@ export default function Article(props) {
   }
 
   // Find article with uid
-  const [articleToDisplay] = useState(tutoArticleData.find(obj => obj.uid === props.uid))
+  const [articleToDisplay] = useState(
+    tutoArticleData.find(obj => obj.uid === props.uid)
+  )
 
   return (
 
@@ -42,7 +44,7 @@ export default function Article(props) {
           </div>
         </Link>
 
-        <div className="date">{articleToDisplay.date.substr(4, 11)}</div>
+        <div className="date">{articleToDisplay.date}</div>
 
         <div className='italic text-gray-600 text-lg'>
           Tags:
