@@ -39,7 +39,6 @@ export default function Article(props) {
       <div className='absolute opacity-50 w-full h-full bg-wave-1 border-4 border-wave-5 border-double rounded z-0'>
       </div>
       <div className='relative bg-transparent z-10 p-2'>
-
         <Link to={`/article/${articleToDisplay.id}`}>
           <div className='flex justify-between'>
             <h1 className='text-2xl text-gray-800'>
