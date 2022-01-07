@@ -13,7 +13,7 @@ import chevronDownIconTwo from "../../Assets/Icons/chevron-down-page-up.svg"
 export default function Article(props) {
 
   // Stored data fetching
-  const { tutoArticleData } = useSelector(state => ({
+  const { articlesData } = useSelector(state => ({
     ...state.articlesDbReducer
   }))
 
@@ -25,12 +25,17 @@ export default function Article(props) {
 
   // Find article with uid
   const [articleToDisplay] = useState(
-    tutoArticleData.find(obj => obj.uid === props.uid)
+    articlesData.find(obj => obj.uid === props.uid)
+  )
+
+  // Formatting date from firebase
+  const [articleDate] = useState(
+    new Date(articleToDisplay.date.seconds * 1000)
   )
 
   return (
 
-    <div className='relative w-11/12 z-0 my-1 lg:w-auto lg:h-full'>
+    <div className='relative w-11/12 z-0 my-1 lg:w-auto lg:h-full '>
       <div className='absolute opacity-50 w-full h-full bg-wave-1 border-4 border-wave-5 border-double rounded z-0'>
       </div>
       <div className='relative bg-transparent z-10 p-2'>
@@ -44,7 +49,7 @@ export default function Article(props) {
           </div>
         </Link>
 
-        <div className="date">{articleToDisplay.date}</div>
+        <div className="date">{`Le ${("0" + (articleDate.getDay()+2)).slice(-2)}/${("0" + (articleDate.getMonth()+1)).slice(-2)}/${articleDate.getFullYear()} à ${articleDate.getHours()}h`}</div>
 
         <div className='italic text-gray-600 text-lg'>
           Tags:

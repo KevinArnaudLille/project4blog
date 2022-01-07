@@ -6,7 +6,6 @@ import TabTags from '../../Components/TabMenu/TabTags';
 import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
 import PageUpBtn from '../../Components/PageUpBtn/PageUpBtn';
-import ParallaxBg from '../../Components/ParallaxeBg/ParallaxBg';
 
 // Style sheet import
 import "./Home.css"

@@ -1,16 +1,15 @@
-import { createStore,combineReducers } from "redux";
+import { createStore,combineReducers, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
 
 // Reducers importation
 import articlesTagsFilteringReducer from "./reducers/articlesTagsFilteringReducer";
 import articlesDbReducer from "./reducers/articlesDbReducer";
-import scrollYStoreReducer from "./reducers/scrollYStoreReducer";
 
 const rootReducer = combineReducers({
   articlesDbReducer,
   articlesTagsFilteringReducer,
-  scrollYStoreReducer
 })
 
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
 export default store;

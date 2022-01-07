@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from 'react-redux';
 export default function TabTags() {
 
     // Stored data fetching
-    const { tagsListToDisplay, tutoArticlesTags } = useSelector(state => ({
+    const { tagsListToDisplay, articlesTags } = useSelector(state => ({
         ...state.articlesTagsFilteringReducer,
         ...state.articlesDbReducer
     }))
@@ -33,7 +33,7 @@ export default function TabTags() {
             Refine by tags:
         </div>
             <div className='text-3xl bg-wave-5 overflow-x-auto flex flex-nowrap px-1'>
-                {tutoArticlesTags.map(tag => {
+                {articlesTags.map(tag => {
 
                     if (tagsListToDisplay.includes(tag)) {
                         return (
