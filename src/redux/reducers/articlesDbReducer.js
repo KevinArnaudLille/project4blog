@@ -1,9 +1,9 @@
+// <<<<< Data storage of articles from firebase >>>>>
+
 // Unique key generation
 import { v4 as uuidv4 } from 'uuid';
 
-import { useDispatch } from 'react-redux';
-
-// Firebase importation
+// Firebase modules importation
 import { db } from '../../firebase/firebase';
 import { collection, getDocs } from "firebase/firestore";
 
@@ -25,10 +25,10 @@ function articlesDbReducer(state = INITIAL_STATE, action) {
       }
     }
 
-    case "RESETBOOL":{
+    case "RESETBOOL": {
       return {
         ...state,
-        isDoneLoading:false
+        isDoneLoading: false
       }
     }
 
@@ -39,9 +39,11 @@ function articlesDbReducer(state = INITIAL_STATE, action) {
 
 export default articlesDbReducer;
 
+// Function (using thunk) for firebase db fetching
 export const fetchDbData = () => dispatch => {
   getDocs(collection(db, "articles")).then((querySnapshot) => {
 
+    // Intermediates variables declaration
     let articlesData = [];
     let articlesTags = [];
 

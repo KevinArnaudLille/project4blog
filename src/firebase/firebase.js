@@ -1,3 +1,4 @@
+// <<<<< Firebase settings and db exportation >>>>>
 // From the good video tutorial (How to build a TODO app with React + Firebase)
 
 import * as firebase from "firebase/app";
@@ -16,4 +17,4 @@ firebase.initializeApp({
 
 const db = getFirestore();
 
-export {db};
+export { db };

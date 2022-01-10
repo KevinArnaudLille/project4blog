@@ -1,0 +1,33 @@
+@keyframes jumpingBtn {
+    from {
+        transform:
+        scale(1,1) 
+        translateY(0px)
+        rotate(180deg);
+    }
+
+    40%{
+        transform:
+        scale(1.1,1)  
+        translateY(-40px)
+        rotate(180deg);
+    }
+    to{
+        transform:
+        scale(1.5,1)  
+        translateY(0px)
+        rotate(180deg);
+    }
+}
+
+.perso-animation{
+    animation : jumpingBtn 0.3s;
+
+    width: 10rem;
+    opacity: 0.5;
+
+    transform:
+    scale(1.5,1)  
+    translateY(0px)
+    rotate(180deg);
+}

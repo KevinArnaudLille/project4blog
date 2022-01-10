@@ -1,5 +1,7 @@
+// <<<<< Data storage of the tags filtered list >>>>>
+
 const INITIAL_STATE = {
-    tagsListToDisplay :[]
+    tagsListToDisplay: []
 }
 
 function articlesTagsFilteringReducer(state = INITIAL_STATE, { type, payload }) {
@@ -19,6 +21,7 @@ function articlesTagsFilteringReducer(state = INITIAL_STATE, { type, payload }) 
         case "RESETFILTERTAG":
             newTagsList = [];
             break;
+
     }
     return {
         ...state,

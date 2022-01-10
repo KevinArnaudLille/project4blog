@@ -14,7 +14,7 @@ import store from "./redux/store";
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Provider store = {store}>
+      <Provider store={store}>
         <App />
       </Provider>
     </BrowserRouter>
