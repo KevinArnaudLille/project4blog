@@ -7,33 +7,38 @@ import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
 import PageUpBtn from '../../Components/PageUpBtn/PageUpBtn';
 
-// Style sheet import
+// Style sheet importation
 import "./Home.css"
 
+
+
 export default function Home() {
-
   return (
-    <div className='Home-bg absolute top-0 left-0 w-screen min-h-screen flex flex-col justify-between'>
+    <div className='Home-bg absolute top-0 left-0 min-h-screen flex flex-col justify-between'>
 
-      {/* Parallax animation - in progress */}
+      {/* PARALLAX COMP. - in progress */}
       <div className='absolute z-0'>
         {/* <ParallaxBg /> */}
       </div>
 
+      {/* HEADER COMP. */}
       <div className='z-10'>
+        {/* Btn to go back home disable on home */}
         <Header toggleBtn={false} />
       </div>
 
+      {/* TABTAGS AND ARTICLECONTAINER COMP. */}
       <div className="flex-grow z-10">
         <TabTags />
         <ArticlesContainer />
       </div>
 
+      {/* FOOTER COMP */}
       <div className='z-10'>
         <Footer />
       </div>
 
-      {/* Contextual go to top btn */}
+      {/* Contextual go to top btn COMP. */}
       <div className='fixed bottom-1 left-1/2 -translate-x-1/2 z-20'>
         <PageUpBtn />
       </div>

@@ -1,4 +1,6 @@
-import { createStore,combineReducers, applyMiddleware } from "redux";
+import { createStore, combineReducers, applyMiddleware } from "redux";
+
+// Thunk module importation for data request from firebase
 import thunk from "redux-thunk";
 
 // Reducers importation

@@ -3,7 +3,7 @@ import './App.css';
 // React-router components importation
 import { Routes, Route } from "react-router-dom"
 
-// Containers importation
+// Pages importation
 import Home from './Containers/Home/Home';
 import ArticlePage from './Containers/ArticlePage/ArticlePage';
 

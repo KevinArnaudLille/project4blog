@@ -3,6 +3,9 @@ import React, { useState, useEffect } from 'react';
 // Asset importation
 import chevronDownIconPageUp from "../../Assets/Icons/chevron-down-page-up.svg"
 
+// Animation importation
+import "./pageUpBtnAnimation.css"
+
 export default function PageUpBtn() {
 
     // Display btn state
@@ -21,7 +24,7 @@ export default function PageUpBtn() {
 
     // Update btn display state with scrolling
     useEffect(() => {
-        if (scrollYValue > 2000 && oldScrollYValue > scrollYValue) {
+        if (scrollYValue > 1000 && oldScrollYValue > scrollYValue) {
             setPageTopBtnDisplay(true);
             if (!isTimerOn) {
                 setIsTimerOn(true);
@@ -40,7 +43,7 @@ export default function PageUpBtn() {
         <div className='lg:invisible'>
             {pageTopBtnDisplay &&
                 <button onClick={() => { window.scrollTo(0, 0) }}>
-                    <img className='w-40 scale-x-150 rotate-180 opacity-60' src={chevronDownIconPageUp} alt="To top" />
+                    <img className='perso-animation' src={chevronDownIconPageUp} alt="To top" />
                 </button>
             }
         </div>
