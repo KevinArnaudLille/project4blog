@@ -1,33 +1,29 @@
+/* Animation declaration */
 @keyframes jumpingBtn {
     from {
         transform:
-        scale(1,1) 
-        translateY(0px)
-        rotate(180deg);
+            scale(1, 1) translateY(0px) rotate(180deg);
     }
 
-    40%{
+    40% {
         transform:
-        scale(1.1,1)  
-        translateY(-40px)
-        rotate(180deg);
+            scale(1.1, 1) translateY(-40px) rotate(180deg);
     }
-    to{
+
+    to {
         transform:
-        scale(1.5,1)  
-        translateY(0px)
-        rotate(180deg);
+            scale(1.5, 1) translateY(0px) rotate(180deg);
     }
 }
 
-.perso-animation{
-    animation : jumpingBtn 0.3s;
+/* Btn class to link animation */
+.noTL-animation {
+    animation: jumpingBtn 0.3s;
 
     width: 10rem;
     opacity: 0.5;
 
+    /* Repetition of the animation final state to ensure placement (No other solution found)  */
     transform:
-    scale(1.5,1)  
-    translateY(0px)
-    rotate(180deg);
+        scale(1.5, 1) translateY(0px) rotate(180deg);
 }

@@ -1,4 +1,4 @@
-// <<<<< Single article display page (not container, my mistake) >>>>>
+// <<<<< Single article page (not container, my mistake) >>>>>
 
 import React, { useEffect } from 'react'
 
@@ -60,7 +60,7 @@ export default function ArticlePage() {
 
                 {/* HEADER COMP. */}
                 <Link to="/">
-                    <Header toggleBtn={true} />
+                    <Header IsGoHomeBtnVisible={true} />
                 </Link>
 
                 {/* BODY */}

@@ -1,3 +1,5 @@
+// <<<<< Home page >>>>>
+
 import React from 'react';
 
 // Components importation

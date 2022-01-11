@@ -1,4 +1,4 @@
-// <<<<< Articles container that fetch db then display and order article, with Article component, on home page >>>>>
+// <<<<< Articles container that fetchs db then displays and orders article, with Article component, on home page >>>>>
 
 import React, { useState, useEffect } from 'react'
 
@@ -56,7 +56,7 @@ export default function ArticlesContainer() {
         </div>
       )
 
-      // if user did not refined with tags ...
+      // if user did not refine with tags ...
     } else {
       // ... then display all article
       return (
