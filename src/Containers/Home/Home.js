@@ -8,6 +8,7 @@ import TabTags from '../../Components/TabMenu/TabTags';
 import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
 import PageUpBtn from '../../Components/PageUpBtn/PageUpBtn';
+import ParallaxBg from '../../Components/ParallaxeBg/ParallaxBg';
 
 // Style sheet importation
 import "./Home.css"
@@ -19,8 +20,8 @@ export default function Home() {
     <div className='Home-bg absolute top-0 left-0 min-h-screen flex flex-col justify-between'>
 
       {/* PARALLAX COMP. - in progress */}
-      <div className='absolute z-0'>
-        {/* <ParallaxBg /> */}
+      <div className='absolute z-0 h-full'>
+        <ParallaxBg />
       </div>
 
       {/* HEADER COMP. */}
