@@ -1,7 +1,7 @@
 /* Bg colors */
 .Home-bg {
   background: var(--home-main-bg-color-down);
-  background: linear-gradient(0deg,var(--home-main-bg-color-down) 11%, var(--home-main-bg-color-up) 79%);
+  background: linear-gradient(0deg,var(--home-main-bg-color-down) 5%, var(--home-main-bg-color-up) 30%);
 }
 
 /* Font for title */

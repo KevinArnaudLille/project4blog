@@ -20,7 +20,7 @@ export default function Home() {
     <div className='Home-bg absolute top-0 left-0 min-h-screen flex flex-col justify-between'>
 
       {/* PARALLAX COMP. - in progress */}
-      <div className='absolute z-0 h-full'>
+      <div className='absolute z-0 h-full w-screen overflow-hidden'>
         <ParallaxBg />
       </div>
 
