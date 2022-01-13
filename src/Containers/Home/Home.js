@@ -17,7 +17,7 @@ import "./Home.css"
 
 export default function Home() {
   return (
-    <div className='Home-bg absolute top-0 left-0 min-h-screen flex flex-col justify-between'>
+    <div className='Home-bg absolute m-0 p-0 top-0 left-0 min-h-screen flex flex-col justify-between'>
 
       {/* PARALLAX COMP. - in progress */}
       <div className='absolute z-0 h-full w-screen overflow-hidden'>

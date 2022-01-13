@@ -41,7 +41,7 @@ export default function Article(props) {
     <div className='relative w-11/12 z-0 my-1 lg:w-auto lg:h-full '>
 
       {/* Isolated background div to allow opacity */}
-      <div className='absolute opacity-50 w-full h-full bg-wave-1 border-4 border-wave-5 border-double rounded z-0'>
+      <div className='absolute opacity-75 w-full h-full bg-wave-1 border-4 border-wave-5 border-double rounded z-0'>
       </div>
 
       {/* Content div */}

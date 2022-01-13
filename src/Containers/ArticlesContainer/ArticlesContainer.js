@@ -36,7 +36,7 @@ export default function ArticlesContainer() {
   }, [])
 
   // Responsive style state
-  const [tailWindStyle] = useState('flex flex-col items-center lg:mx-8 2xl:mx-60 lg:place-items-stretch lg:grid lg:grid-cols-2 lg:items-start lg:auto-cols-auto lg:gap-2 lg:p-2')
+  const [tailWindStyle] = useState('flex flex-col items-center lg:mx-8 2xl:mx-80 lg:place-items-stretch lg:grid lg:grid-cols-2 lg:items-start lg:auto-cols-auto lg:gap-2 lg:p-2')
 
   // Check if data are loaded
   if (isDoneLoading) {

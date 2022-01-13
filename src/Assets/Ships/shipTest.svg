@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="65.744mm" height="87.103mm" version="1.1" viewBox="0 0 65.744 87.103" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <linearGradient id="linearGradient27394">
+   <stop stop-color="#db5120" offset="0"/>
+   <stop stop-color="#f0d61a" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient27396" x1="72.465" x2="72.822" y1="15.707" y2="67.111" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient27394"/>
+  <linearGradient id="linearGradient55912" x1="72.822" x2="72.822" y1="104.95" y2="76.035" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient27394"/>
+  <linearGradient id="linearGradient56094" x1="74.607" x2="74.607" y1="102.45" y2="77.463" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#f59282" offset="0"/>
+   <stop stop-color="#eed016" offset="1"/>
+  </linearGradient>
+ </defs>
+ <g transform="translate(-16.723 -9.432)">
+  <g transform="rotate(32.517 74.2 18.787)" stroke-width=".26458">
+   <ellipse cx="73.893" cy="83.531" rx="21.775" ry="23.917" fill="url(#linearGradient56094)"/>
+   <ellipse cx="73.893" cy="70.859" rx="19.276" ry="19.812" fill="url(#linearGradient55912)"/>
+   <ellipse cx="73.001" cy="44.086" rx="16.242" ry="34.091" fill="url(#linearGradient27396)"/>
+  </g>
+ </g>
+</svg>

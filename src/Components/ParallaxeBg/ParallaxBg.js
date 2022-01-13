@@ -1,24 +1,32 @@
 import React, { useEffect, useState } from 'react'
 
 // Assets importation
-import cloudTest from "../../Assets/Clouds/cloud-test.svg"
+import cloudTest from "../../Assets/Clouds/cloud-test.svg";
+import shipTest from "../../Assets/Ships/shipTest.svg";
+import bottomCloudA from "../../Assets/Clouds/bottom-cloud-a.svg"
 
+// Parallax items constructor importation
 import { ParallaxItem } from './parallaxItemConstructor';
 
 export default function ParallaxBg() {
 
     const [scrollYValue, setScrollYValue] = useState(0);
-    
-    const [testCloud] = useState(new ParallaxItem(100,100,0,0,cloudTest,50,0.4));
-    const [testCloud2] = useState(new ParallaxItem(10,200,-0.2,-0.1,cloudTest,200,0))
-    const [testCloud3] = useState(new ParallaxItem(-100,500,0.7,0.5,cloudTest,100,0))
+
+    const [parallaxItems, setparallaxItems] = useState([
+        // // ... from top, background item first
+        
+        // // ... from bottom, background item first
+        // new ParallaxItem("item2",-300, 10, false, 0.2, 0, bottomCloudA, 500, 0),
+        // new ParallaxItem("item2",100, 50, false, -0.1, 0, bottomCloudA, 500, 0),
+        
+        // // .. test
+        // new ParallaxItem("item1",100, 100, true, 0, 0, cloudTest, 50, 0.4),
+        // new ParallaxItem("item2",-100, 700, false, 0.5, -0.1, shipTest, 50, 0.15),
+    ])
 
     // Add event listener while scrolling
     useEffect(() => {
-
-        console.log('document Element scroll hieght: ', document.documentElement.scrollHeight);
-
-        window.addEventListener("scroll", () => setScrollYValue(window.scrollY))
+        window.addEventListener("scroll", () => setScrollYValue(window.scrollY));
         return () => {
             window.removeEventListener("scroll", () => setScrollYValue(window.scrollY))
         }
@@ -26,17 +34,20 @@ export default function ParallaxBg() {
 
     // Update  with scrolling
     useEffect(() => {
-        console.log(Math.cos(scrollYValue/100));
-    }, [scrollYValue])
 
+        
+
+        // console.log(Math.cos(scrollYValue/100));
+        // console.log('document Element scroll hieght: ', document.documentElement.scrollHeight);
+    }, [scrollYValue])
 
 
 
     return (
         <div className='w-screen h-full overflow-hidden'>
-            {testCloud.DOMElem(scrollYValue)}
-            {testCloud2.DOMElem(scrollYValue)}
-            {testCloud3.DOMElem(scrollYValue)}
+            {parallaxItems.map((item) => {
+                return item.DOMElem(scrollYValue)
+            })}
         </div>
     )
 }
