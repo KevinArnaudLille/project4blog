@@ -12,6 +12,9 @@ import { useSelector } from 'react-redux';
 import chevronDownIcon from "../../Assets/Icons/chevron-down.svg"
 import chevronDownIconTwo from "../../Assets/Icons/chevron-down-page-up.svg"
 
+// Import parse function to turn string in JSX
+import parse from 'html-react-parser';
+
 
 
 export default function Article(props) {
@@ -78,21 +81,23 @@ export default function Article(props) {
         {/* ARTICLE CONTENT */}
 
         {/* While on mobile, if user click on accordeon toggle ... */}
-        {accordeonToggle ?
-          // ... then display full article content ...
-          <div className="text-gray-900">
-            {articleToDisplay.content}
+       
+          {accordeonToggle ?
+            // ... then display full article content ...
+            <div className="text-gray-900">
+              {parse(articleToDisplay.content)}
+            </div>
+            :
+            // ... else display a few wordd preview
+            <div className="text-gray-900 lg:hidden">
+              {parse(articleToDisplay.content.substring(0, 150) + "...")}
+            </div>
+          }
+          {/* While on large screen, always display article content */}
+          <div className="text-gray-900 hidden lg:block">
+            {parse(articleToDisplay.content)}
           </div>
-          :
-          // ... else display a few wordd preview
-          <div className="text-gray-900 lg:hidden">
-            {articleToDisplay.content.substring(0, 150) + "..."}
-          </div>
-        }
-        {/* While on large screen, always display article content */}
-        <div className="text-gray-900 hidden lg:block">
-          {articleToDisplay.content}
-        </div>
+        
 
         {/* ACCORDEON TOGGLE BTN */}
         <div className='flex flex-col items-center lg:hidden'>

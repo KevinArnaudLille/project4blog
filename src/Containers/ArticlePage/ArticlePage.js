@@ -15,6 +15,9 @@ import Footer from '../../Components/Footer/Footer';
 // Middleware function importation for firebase data loading
 import { fetchDbData } from '../../redux/reducers/articlesDbReducer';
 
+// Import parse function to turn string in JSX
+import parse from 'html-react-parser';
+
 
 
 export default function ArticlePage() {
@@ -100,7 +103,7 @@ export default function ArticlePage() {
 
                         {/* ARTICLE TEXT CONTENT */}
                         <div className="text-gray-900 lg:text-lg lg:p-1">
-                            {articleToDisplay.content}
+                            {parse(articleToDisplay.content)}
                         </div>
                     </div>
                 </div>
