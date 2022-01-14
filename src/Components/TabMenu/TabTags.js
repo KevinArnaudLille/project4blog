@@ -47,12 +47,12 @@ export default function TabTags() {
                     if (tagsListToDisplay.includes(tag)) {
                         // ... display tag in blod and make click remove tag from display list ...
                         return (
-                            <button key={tag} className='m-1 order-1 text-wave-1 font-bold italic hover:font-normal' onClick={() => removeTag(tag)}>{tag}</button>
+                            <button key={tag} className='m-1 order-1 text-wave-1 font-bold italic' onClick={() => removeTag(tag)}>{tag}</button>
                         )
                     } else {
                         // ... else display tag normal and make click add tag
                         return (
-                            <button key={tag} className='m-1 order-2 italic hover:font-bold' onClick={() => addTag(tag)}>{tag}</button>
+                            <button key={tag} className='m-1 order-2 italic' onClick={() => addTag(tag)}>{tag}</button>
                         )
                     }
                 })}

@@ -44,12 +44,8 @@ export default function PageUpBtn() {
                 setTimeout(() => {
                     setIsTimerOn(false);
                     setPageTopBtnDisplay(false);
-                }, 2000)
+                }, 1800)
             }
-
-            // ... else hide go to top btn
-        } else {
-            setPageTopBtnDisplay(false);
         }
 
         // update old scroll Y value to deteminate direction
